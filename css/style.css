@@ -1,19 +1,20 @@
 .flex-container {
-    display: -webkit-flex;
-    display: flex;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
+	display: -webkit-flex;
+	display: flex;
+	background-color: black;
+	position: fixed;
+	top: 0; 
+	right: 0;
+	bottom: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
 }
 
 .flex-item {
+	text-decoration: none;
 	display: -webkit-flex;
-    display: flex;
+  	display: flex;
 	/*margin: auto;*/
 	background-color: rgb(29,29,29);
 	color: rgba(255,255,255, 0.9);
@@ -22,15 +23,26 @@
 	width: 30%;
 	/*border: solid rgba(255,255,255, 0.7) 0.25em;*/
 	align-items: center;
-    justify-content: center;
-    /*border-radius: 10%;*/
+	justify-content: center;
+	/*border-radius: 10%;*/
 }
 
 .flex-item p {
-	font-size: 300%;
+	font-size: 3.5em;
 	font-weight: bold;
 	/*margin: auto;
 	text-align: center;*/
+}
+
+.flex-item img {
+	width: 3.5em;
+	height: 3.5em;
+	margin-right: 1em;
+}
+
+.flex-item:hover img {
+	width: 4em;
+	height: 4em;
 }
 
 .flex-container :nth-child(2) {
@@ -44,26 +56,49 @@
 	/*border: solid rgba(255,255,255, 1) 0.25em;*/
 }
 
+/*.flex-item:active {
+	background-color: red;
+}*/
+
 .flex-item:hover p {
 	/*text-transform: uppercase;*/
-	font-size: 330%
+	font-size: 4em;
 }
 
 @media screen and (max-width: 600px){
-  .flex-container {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
+ 	.flex-container {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
 
-  .flex-item {
-  	height: 28%;
-	width: 90%;
-  }
+	.flex-item {
+		height: 28%;
+		width: 90%;
+	}
 }
 
 @media screen and (min-width: 600px){
-  .flex-container {
-   -webkit-flex-direction: row;
-   flex-direction: row;
-  }
+	.flex-container {
+		-webkit-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
+@media only screen and (orientation: landscape) {
+	.flex-container {
+		-webkit-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
+@media only screen and (orientation: portrait) {
+ 	.flex-container {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.flex-item {
+		height: 28%;
+		width: 90%;
+	}
 }
