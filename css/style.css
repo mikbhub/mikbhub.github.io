@@ -65,6 +65,13 @@
 	font-size: 6vw;
 }
 
+@media screen and (min-width: 600px), (orientation: landscape){
+	.flex-container {
+		-webkit-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
 @media screen and (max-width: 600px), (orientation: portrait){
  	.flex-container {
 		-webkit-flex-direction: column;
@@ -96,19 +103,5 @@
 	.flex-item:hover p {
 	/*text-transform: uppercase;*/
 	font-size: 15vw;
-	}
-}
-
-@media screen and (min-width: 600px){
-	.flex-container {
-		-webkit-flex-direction: row;
-		flex-direction: row;
-	}
-}
-
-@media only screen and (orientation: landscape) {
-	.flex-container {
-		-webkit-flex-direction: row;
-		flex-direction: row;
 	}
 }
