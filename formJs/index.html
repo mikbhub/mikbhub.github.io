@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <meta name="description" content="Simiple contact form for customers to provide theri feedback">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <div class="center-align col s12">
+                <h1>Customer feedback form</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form class="col s12" method="POST" action="" name="feedbackform">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input minlength="2" required id="firs_name" name="first_name" type="text" class="validate">
+                        <label for="firs_name" data-error="to short, at least 2 characters" data-success="ok">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" required type="text" name="last_name" class="validate">
+                        <label for="last_name" data-error="to short, at least 2 characters" data-success="ok">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input required id="email" name="email" type="email" class="validate">
+                        <label for="email" data-error="enter a valid email address" data-success="email ok">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea minlength="10" data-length="1000" required name="text" id="textarea1" class="materialize-textarea validate"></textarea>
+                        <label for="textarea1" data-error="Type at least 10 characters, please" data-success="ok">Problem description</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn-large waves-effect waves-light red darken-1 right" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<!--jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- Compiled and minified JavaScript for materialize-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<!-- Form logic -->
+<script src="static/js/form.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
