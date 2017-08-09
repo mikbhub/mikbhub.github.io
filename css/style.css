@@ -3,7 +3,7 @@
 	display: flex;
 	background-color: black;
 	position: fixed;
-	top: 0;
+	top: 0; 
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -12,6 +12,7 @@
 }
 
 .flex-item {
+	text-decoration: none;
 	display: -webkit-flex;
   	display: flex;
 	/*margin: auto;*/
@@ -27,10 +28,21 @@
 }
 
 .flex-item p {
-	font-size: 300%;
+	font-size: 5vw;
 	font-weight: bold;
 	/*margin: auto;
 	text-align: center;*/
+}
+
+.flex-item img {
+	width: 5vw;
+	height: 5vw;
+	margin-right: 2%;
+}
+
+.flex-item:hover img {
+	width: 6vw;
+	height: 6vw;
 }
 
 .flex-container :nth-child(2) {
@@ -50,10 +62,17 @@
 
 .flex-item:hover p {
 	/*text-transform: uppercase;*/
-	font-size: 330%
+	font-size: 6vw;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (min-width: 600px), (orientation: landscape){
+	.flex-container {
+		-webkit-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
+@media screen and (max-width: 600px), (orientation: portrait){
  	.flex-container {
 		-webkit-flex-direction: column;
 		flex-direction: column;
@@ -63,11 +82,26 @@
 		height: 28%;
 		width: 90%;
 	}
-}
 
-@media screen and (min-width: 600px){
-	.flex-container {
-		-webkit-flex-direction: row;
-		flex-direction: row;
+	.flex-item p {
+		font-size: 14vw;
+		font-weight: bold;
+
+	}
+
+	.flex-item img {
+		width: 14vw;
+		height: 14vw;
+		margin-right: 2%;
+	}
+
+	.flex-item:hover img {
+		width: 15vw;
+		height: 15vw;
+	}
+
+	.flex-item:hover p {
+	/*text-transform: uppercase;*/
+	font-size: 15vw;
 	}
 }
